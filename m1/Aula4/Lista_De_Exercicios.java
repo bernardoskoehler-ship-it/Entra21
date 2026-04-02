@@ -124,7 +124,10 @@ static Scanner scanner = new Scanner(System.in);
 	}
 	
 	static void exe11() {
-		//
+		int diasNoAno = 366;
+		if(diasNoAno == 366) {
+			System.out.println("Ano bissesto");
+		}
 	}
 	static void exe12() {
 		System.out.println("Digite dois numeros e um operador(+ - / *)");
