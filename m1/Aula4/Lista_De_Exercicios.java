@@ -97,7 +97,18 @@ static Scanner scanner = new Scanner(System.in);
 		}
 	}
 	static void exe9() {
-		//
+		System.out.println("Digite 3 lados de um triangulo");
+		int[] lados = new int[3];
+		for(int i = 0; i < 3; i++) {
+			lados[i] = scanner.nextInt();
+		}
+		if(lados[0] == lados[1] && lados[0] == lados[2]) {
+			System.out.println("Equilatero");
+		}else if(lados[0] == lados[1] || lados[0] == lados[2] || lados[1] == lados[2]) {
+			System.out.println("Isoceles");
+		}else if(lados[0] != lados[1] && lados[1] != lados[2]) {
+			System.out.println("Escaleno");
+		}
 	}
 	static void exe10() {
 		String usuarioAtual = "Bernardo";
