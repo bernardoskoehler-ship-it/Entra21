@@ -2,4 +2,4 @@
 exercicios e conteudos voltados e estudados adurante o curso de Java/Entra21
 
 📌
-os projetps estao separados por modulos e dias das aulas
+os projetps estao separados por modulos e dias das aulas.
