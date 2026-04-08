@@ -18,4 +18,4 @@ O curso tem como objetivo fornecer uma base completa na linguagem, abordando des
 
 ## 📁 Organização
 
-Os arquivos estão organizados por módulos de aprendizado e dias de realizacao das atividades do curso.
+Os arquivos estão organizados por módulos de aprendizado e dias de realização das atividades do curso.
