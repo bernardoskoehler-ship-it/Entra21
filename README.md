@@ -1,5 +1,21 @@
-# Entra21
-exercicios e conteudos voltados e estudados adurante o curso de Java/Entra21
+# ☕ Entra21 - Curso de Java
 
-📌
-os projetps estao separados por modulos e dias das aulas. 
+Este repositório contém meus estudos realizados durante o curso de **Java do Entra21**.
+
+O curso tem como objetivo fornecer uma base completa na linguagem, abordando desde conceitos fundamentais até aplicações voltadas para o mercado de trabalho, incluindo backend e noções de frontend.
+
+---
+
+## 🎯 Objetivo
+
+- Construir uma base sólida em Java
+- Entender conceitos essenciais de programação
+- Ter contato com desenvolvimento backend e frontend
+- Me preparar para o mercado de tecnologia
+
+---
+
+
+## 📁 Organização
+
+Os arquivos estão organizados por módulos de aprendizado e dias do curso:
