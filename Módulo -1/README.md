@@ -22,7 +22,7 @@ Neste módulo, o foco é aprender os conceitos fundamentais da programação uti
 - [x] Entrada e saída de dados (Scanner)  
 - [x] Estruturas condicionais (if/else, switch)  
 - [x] Laços de repetição (for, while, do-while)  
-- [ ] Arrays  
+- [x] Arrays  
 - [ ] Métodos (funções)  
 - [ ] Organização de código  
 
