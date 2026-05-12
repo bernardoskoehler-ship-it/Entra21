@@ -1,6 +1,6 @@
-# 🌐 Módulo 02 - Fundamentos de Desenvolvimento Web
+# 🌐 Módulo 04 - Fundamentos de HTML e CSS
 
-Este diretório contém meus estudos do **Módulo 02** do curso Entra21.
+Este diretório contém meus estudos do **Módulo 04** do curso Entra21.
 
 Neste módulo, o foco é aprender os fundamentos do desenvolvimento web utilizando **HTML, CSS e JavaScript**, criando páginas estruturadas, estilizadas e interativas através de exercícios práticos e pequenos projetos.
 
