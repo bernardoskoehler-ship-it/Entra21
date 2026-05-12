@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" id="nome" placeholder="Ex: ana" />
+        <input type="text" id="email" placeholder="Ex: ana@gmail.com" />
+
+        <input type="button" value="gravar" onclick="validar()" />
+
+    </form>
+
+<script>
+
+    function atribuirCss() {
+        const myP = document.getElementsByTagName('p'[0])
+        
+        myP.setAttribute('class','texto')
+        console.log(myP)
+
+        const outroP = document.getElementsByTagName('p')[1]
+        console.log(outroP)
+        outroP.style.color = 'yellow'
+    }
+
+    function esconder() {
+        const myDiv = document.getElementById('mundoInseto')
+        const myBt = document.getElementsByTagName('BUTTON')[1]
+
+        if(myBt.innerHTML === 'esconder') {
+            myDiv.style.display = 'none'
+            myBt.innerHTML = 'mostrar'
+        }else {
+            myDiv.style.dysplay = 'block'
+            myBt.innerHTML = 'esconder'
+        }
+    }
+
+</script>
+    
+</body>
+</html>
