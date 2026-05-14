@@ -1,1 +1,101 @@
+body {
+    background-color: #111827;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 15px;
+    margin: 0;
+    min-height: 100vh;
+}
 
+.cinema {
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    background-color: #1f2937;
+    padding: 12px;
+    border-radius: 20px;
+    width: 950px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 12px 0;
+    border: 1px solid #374151;
+}
+
+.tela {
+    width: 600px;
+    height: 60px;
+    background-image: url(https://media1.tenor.com/m/5qYi8jMbbCEAAAAC/sheldon-sheldon-cooper.gif);
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 100px;
+    margin: 15px auto;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.linha {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.letra-linha {
+    position: absolute;
+    left: calc(50% - 350px);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.assentos {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #1f2937;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.selecionado {
+    background-color: #22c55e;
+    color: white;
+}
+
+.selecionado:hover {
+    background-color: #16a34a;
+}
+
+#lista-assentos {
+    list-style: none;
+    padding: 0;
+    margin-top: 8px;
+    font-size: 18px;
+    color: #22c55e;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
