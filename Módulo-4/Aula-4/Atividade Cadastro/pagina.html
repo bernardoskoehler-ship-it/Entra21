@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Usuários</title>
+</head>
+<body>
 
+<a href="cadastro.html">Voltar</a>
+
+<h2>Usuários cadastrados</h2>
+
+<ul id="lista"></ul>
+
+<script>
+
+const lista = document.getElementById("lista");
+
+function carregarUsuarios() {
+
+    lista.innerHTML = "";
+
+    let usuarios =
+        JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    usuarios.forEach(function(usuario, index) {
+
+        const li = document.createElement("li");
+
+        li.innerText =
+            "Nome: " + usuario.nome +
+            " | Email: " + usuario.email + " ";
+
+        // botão de apagar
+        const btn = document.createElement("button");
+        btn.innerText = "Apagar";
+
+        btn.onclick = function() {
+
+            usuarios.splice(index, 1);
+
+            localStorage.setItem(
+                "usuarios",
+                JSON.stringify(usuarios)
+            );
+
+            carregarUsuarios();
+        };
+
+        li.appendChild(btn);
+        lista.appendChild(li);
+    });
+}
+
+carregarUsuarios();
+
+</script>
+
+</body>
+</html>
