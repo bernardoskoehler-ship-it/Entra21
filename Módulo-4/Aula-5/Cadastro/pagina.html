@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Usuários</title>
 
+<style>
+
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+#lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin: 0 0 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(91, 181, 255);
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="cadastro.html">Voltar</a>
+
+<h2>Usuários cadastrados</h2>
+
+<div id="lista"></div>
+
+<script>
+
+const lista = document.getElementById("lista");
+
+function carregarUsuarios() {
+
+    lista.innerHTML = "";
+
+    let usuarios =
+        JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    usuarios.forEach(function(usuario, index) {
+
+        // cartão
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        // nome
+        const nome = document.createElement("h3");
+        nome.innerText = usuario.nome;
+
+        // email
+        const email = document.createElement("p");
+        email.innerText = "Email: " + usuario.email;
+
+        // botão
+        const btn = document.createElement("button");
+        btn.innerText = "Apagar";
+
+        btn.onclick = function() {
+
+            usuarios.splice(index, 1);
+
+            localStorage.setItem(
+                "usuarios",
+                JSON.stringify(usuarios)
+            );
+
+            carregarUsuarios();
+        };
+      
+        card.appendChild(nome);
+        card.appendChild(email);
+        card.appendChild(btn);
+
+        lista.appendChild(card);
+    });
+    document.addEventListener("click", function (e) {
+    const img = document.createElement("img");
+
+    img.src = "https://th.bing.com/th/id/R.85aa8e814f6c9c2028e939d4fc2c93b6?rik=H7kF6GrRp9v4YA&pid=ImgRaw&r=0";
+    img.style.position = "absolute";
+    img.style.left = e.pageX + "px";
+    img.style.top = e.pageY + "px";
+    img.style.width = "60px";
+    img.style.transform = "translate(-50%, -50%)";
+    img.style.pointerEvents = "none";
+
+    document.body.appendChild(img);
+
+    setTimeout(() => img.remove(), 100);
+});
+}
+
+carregarUsuarios();
+
+</script>
+
+</body>
+</html>
