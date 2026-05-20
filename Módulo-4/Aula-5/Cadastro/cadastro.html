@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Cadastro</title>
 
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(91, 181, 255);
+}
+</style>
+</head>
+
+<body>
+
+    <a href="pagina.html">Ver usuários cadastrados</a>
+
+<h2>Criar Conta</h2>
+
+<form id="formCadastro">
+
+    <label>Nome:</label><br>
+    <input type="text" id="nome" required placeholder="nome"><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" required placeholder="email@gamil.com"><br>
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+<p id="mensagem"></p>
+
+<script>
+
+const form = document.getElementById("formCadastro");
+
+form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+
+    let usuarios =
+        JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    usuarios.push({ nome, email });
+
+    localStorage.setItem(
+        "usuarios",
+        JSON.stringify(usuarios)
+    );
+
+    document.getElementById("mensagem").innerText =
+        "Usuário cadastrado com sucesso!";
+
+    form.reset();
+});
+document.addEventListener("click", function (e) {
+    const img = document.createElement("img");
+
+    img.src = "https://th.bing.com/th/id/R.85aa8e814f6c9c2028e939d4fc2c93b6?rik=H7kF6GrRp9v4YA&pid=ImgRaw&r=0";
+    img.style.position = "absolute";
+    img.style.left = e.pageX + "px";
+    img.style.top = e.pageY + "px";
+    img.style.width = "60px";
+    img.style.transform = "translate(-50%, -50%)";
+    img.style.pointerEvents = "none";
+
+    document.body.appendChild(img);
+
+    setTimeout(() => img.remove(), 100);
+});
+
+</script>
+
+</body>
+</html>
